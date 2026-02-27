@@ -38,7 +38,7 @@ A research group member should type their GitHub username below.
 
 ### GitHub Repository for Research Prototype
 
-- **Repository URL**: [URL of GitHub Repository for Research Prototype](https://github.com/Jsharsh33v/PriceBridge-Jsharsh33v-Jsem.git)
+- **Repository URL**: [URL of GitHub Repository for Research Prototype](https://github.com/Jsharsh33v/MaintAlign.git)
 
 ### GitHub Repository for Research Data
 
@@ -50,7 +50,7 @@ A research group member should type the title of their junior seminar research
 project into the following fenced code block.
 
 ```text
-PriceBridge: Linking Economic Theory to Real-World Pricing
+MaintAlign - Resource-constrained preventive maintenance scheduling with production chains
 ```
 
 ## Research Group Contributions
@@ -70,6 +70,16 @@ during presentations, demonstrations, or informal discussions. Include:
 - **Impact**: While I did not directly observe changes made as a result of my feedback, my comments were intended to help clarify the project’s scope, reinforce its educational focus, and improve the overall structure and readability of the introduction. The feedback highlights areas that could strengthen the presentation if incorporated.
 - **Reference**: https://github.com/Allegheny-Computer-Science-600610-25-26/senior-comprehensive-project-journal-and-chapters-Coltin2121/issues/5
 
+
+- **Researcher Name / Project**: Aidan Dyga, Pysealer
+- **Feedback Provided**: I provided peer-review feedback on the Related Work chapter of Pysealer. I noted that the chapter used relevant and strong sources and that the overall progression from general agentic AI background to MCP-specific security tools was logical. I said the chapter would be even stronger with clearer transitions between the broad framework discussion and the more focused MCP security discussion. I also suggested adding more direct synthesis between sources, especially when comparing tools and showing how Pysealer fills a gap that other approaches do not address as directly.
+- **Impact**: While I did not directly observe revisions made from my comments, the feedback was intended to help improve the chapter’s flow, source integration, and comparative analysis. If incorporated, these suggestions could make the Related Work chapter feel more connected and strengthen the argument for why Pysealer is an important contribution within the MCP security space.
+- **Reference**: https://github.com/Allegheny-Computer-Science-600610-25-26/senior-comprehensive-project-journal-and-chapters-dyga01/issues/8
+
+- **Researcher Name / Project**: Aidan Dyga, Pysealer
+- **Feedback Provided**: I provided peer-review feedback on the Methods chapter of Pysealer. I commented that the chapter clearly explained the technical architecture, implementation choices, and workflow of the project. I highlighted that the explanation of the Python and Rust components was strong and that the methods were tied well to the project’s main security goals. I also suggested a few improvements, including adding a clearer end-to-end example of how the tool is used, making the workflow easier to follow from start to finish, and including a more direct reference to the project repository or access point for reproducibility.
+- **Impact**: I did not directly see the outcome of my feedback, but the goal of my comments was to help make the Methods chapter more reproducible and easier for readers to understand. If applied, these suggestions could make it easier for someone else to follow the implementation process, understand the artifact’s inputs and outputs, and see how the tool works in practice.
+- **Reference**: https://github.com/Allegheny-Computer-Science-600610-25-26/senior-comprehensive-project-journal-and-chapters-dyga01/issues/9
 Example entries:
 
 - **Student Name One / Machine Learning Bias Detection**: Suggested examining
