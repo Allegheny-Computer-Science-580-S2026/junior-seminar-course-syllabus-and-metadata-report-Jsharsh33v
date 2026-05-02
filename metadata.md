@@ -42,7 +42,7 @@ A research group member should type their GitHub username below.
 
 ### GitHub Repository for Research Data
 
-- **Repository URL**: [URL of GitHub Repository for Research Data](https://github.com/Allegheny-Computer-Science-580-S2026/)
+- **Repository URL**: [URL of GitHub Repository for Research Data](https://github.com/Jsharsh33v/MaintAlign.git)
 
 ## Research Project Title
 
@@ -101,55 +101,32 @@ during presentations, demonstrations, or informal discussions. Include:
 - **Impact**: The feedback suggests three revision priorities: a minor revision to complete missing elements such as result tables and explanations of metrics; a moderate revision to expand the evaluation and interpretation of experimental results.
 - **Reference**: https://github.com/Allegheny-Computer-Science-600610-25-26/senior-comprehensive-project-journal-and-chapters-Coltin2121/issues/15
 
-
-Example entries:
-
-- **Student Name One / Machine Learning Bias Detection**: Suggested examining
-  fairness metrics beyond accuracy; Jane incorporated demographic parity analysis
-  into her evaluation framework
-- **Student Name Two / Distributed Caching System**: Asked about handling
-  network partitions during demo; led to important discussion about consistency
-  models
-- **Student Name Three / Graph Algorithm Visualization**: Recommended adding
-  real-time performance comparison; Alex added this feature in Week 12
-
 ### Technical Discussions and Problem-Solving
 
 Document instances where you participated in collaborative technical
 discussions or helped fellow researchers troubleshoot issues:
 
-- **Discussion Topic / Problem**: [Brief description]
-- **Your Contribution**: [What you shared, suggested, or helped debug]
-- **Outcome**: [How it helped advance the research]
+- **Discussion Topic / Problem:** Research prototype repository structure and organization
+- **Your Contribution:** Discussed clean repository organization with Gabriel Salvatore during an in-class session. Shared general advice about separating core logic from utility modules, keeping data and result artifacts out of version control via `.gitignore`, structuring the README around quick-start commands and a project-tree diagram, and using a virtual environment workflow with a pinned `requirements.txt`. The conversation drew directly on the same patterns I had applied to the MaintAlign repository.
+- **Outcome:** Gave Gabriel a concrete template to consider for his own prototype layout. The discussion also helped me articulate why I had made specific organizational choices in MaintAlign, which was useful when I later wrote the prototype documentation in Journal Entry 2.
 
-Example entries:
+- **Discussion Topic / Problem:** Why constraint-based optimization beats per-machine baseline strategies
+- **Your Contribution:** During the Conference on Emerging Research Q&A, Vivian asked why MaintAlign beats the four baseline strategies. I explained that the baselines treat each machine independently — each one decides its own maintenance interval based only on its own failure curve — while the CP-SAT optimizer sees the whole factory at once and can exploit two structural facts the baselines cannot: shared technician capacity, which forces trade-offs between machines competing for the same time slots, and production-chain dependencies, which reward clustering same-chain maintenance into opportunistic groups. The savings come from those system-level decisions, not from any single per-machine improvement.
+- **Outcome:** The exchange helped clarify, both for the audience and for me, that the contribution of MaintAlign is not a better per-machine policy but a coordinated factory-level schedule. That framing later shaped how I described the third contribution in @sec-summary-results.
 
-- **Docker Containerization Issues**: Shared my Dockerfile configuration and
-  helped three researchers set up their development environments
-- **Statistical Testing Discussion**: Explained paired t-tests vs. Wilcoxon
-  tests; helped multiple researchers choose appropriate tests for their
-  experiments
-- **GitHub Actions Debugging**: Collaborated with two researchers to fix CI/CD
-  pipeline failures; documented solution in group Slack channel
+- **Discussion Topic / Problem:** Trade-off between optimization speed and detection accuracy in Alluder
+- **Your Contribution:** Asked Samuel Roque whether the optimization work in Alluder changed the accuracy of detection or only its speed. The question was meant to surface whether the optimizations preserved correctness or introduced approximation trade-offs.
+- **Outcome:** Prompted Samuel to articulate the boundary between correctness-preserving and correctness-affecting optimizations in his pipeline, which is a useful framing for any project that mixes algorithmic and performance work.
 
 ### Research Group Meeting Participation
 
 Note particularly meaningful contributions during research group meetings:
 
-- **Meeting Date / Topic**: [When and what]
-- **Contribution**: [Question asked, insight shared, or resource provided]
-- **Value to Group**: [How it benefited the research community]
+- **Office Hours Meeting with Professor Kapfhammer:** Discussed two technical aspects of MaintAlign's modeling approach. The first was opportunistic grouping for production chains — how to encode the incentive for the solver to cluster same-chain maintenance events so the chain only stops once instead of multiple times. That conversation informed the half-reified Boolean encoding described in @sec-methodology and was directly responsible for the chain grouping mechanism turning out to be one of the more impactful pieces of the formulation, as discussed in @sec-results. The second was the framing of MaintAlign as a 0/1 knapsack-style problem, where each potential maintenance task is an "item" with value (failure risk reduction) and weight (PM cost plus chain costs), and technician capacity is the knapsack constraint. That framing made the contribution easier to communicate to readers familiar with classical optimization but new to constraint programming, and it shaped the opening of the data model documentation in `core/instance.py`.
 
-Example entries:
+- **Week 10 / Friday Joint Writing Session:** Asked Professor Luman for advice on how to expand and strengthen a chapter draft that felt thin. Professor Luman recommended the traffic-light paragraph method: a topic sentence, followed by a concrete example, followed by an explanation that ties the example back to the claim. Applied that structure across subsequent chapter revisions, particularly in the methodology section and the results discussion in @sec-results.
 
-- **Week 4 / Research Ethics Discussion**: Raised important questions about
-  data privacy in web scraping projects; led to productive discussion about
-  `robots.txt` and ethical boundaries
-- **Week 9 / Writing Workshop**: Shared effective strategies for writing
-  related work sections; multiple researchers found it helpful because it
-  clarified the way they should structure the second chapter of their report
-- **Week 11 / Results Visualization**: Demonstrated `matplotlib` customization
-  techniques; several researchers adopted similar approaches
+- **Conference on Emerging Research / Pair 19:** Presented MaintAlign experimental results in a three-minute talk to the broader research community. The presentation covered the constraint-based optimization model, the four-baseline comparison showing 18 to 25 percent savings, and the Monte Carlo risk analysis with VaR95 (including the medium-hard result of $47,600 versus $57,000 for condition-based, with downtime dropping from 32 to 22 days). Compressing a semester of work into three minutes for a non-specialist audience forced clarifying decisions about which contributions to lead with, and those decisions later shaped how I framed @sec-summary-results in the conclusions chapter. The Q&A exchange with Vivian on baseline comparisons (documented above under Technical Discussions) was the most useful part of the event for refining the project's framing.
 
 ### Research Resources Shared
 
@@ -162,16 +139,6 @@ with the research group that helped advance collective knowledge:
 
 Example entries:
 
-- **"Testing in Production" Paper**: Shared with entire group during Week 7;
-  relevant for multiple systems research projects
-- **Plotly Visualization Tutorial**: Shared with four researchers working on
-  data-heavy projects; enabled interactive visualizations
-- **arXiv Paper on Neural Architecture Search**: Shared with Sarah Lee for her
-  AutoML project; became a key reference in her related work chapter
-
-## Additional Project Information
-
-Please use this section to record any other relevant information about your
-Junior Seminar research project, your research process, or any other
-information that your research adviser or the research group coordinator deems
-important for you to document.
+- **Resource:** Winter, F. and Musliu, N. (2021). "Constraint-based Scheduling for Paint Shops in the Automotive Supply Industry." *ACM Transactions on Intelligent Systems and Technology* 12(2), Article 17. https://doi.org/10.1145/3430710
+- **Shared With:** Gabriel Salvatore
+- **Purpose:** Gabriel was curious about how constraint programming applies to industrial scheduling problems outside the domain of his own project. The Winter and Musliu paper is a clean published example of CP applied to a real industrial scheduling problem (paint shop sequencing) and uses some of the same modeling primitives — interval variables, no-overlap constraints, cumulative resources — that appear in MaintAlign. Shared it as a reference for connecting the constraint-programming approach to a peer-reviewed industrial case study.
