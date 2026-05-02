@@ -133,12 +133,6 @@ Note particularly meaningful contributions during research group meetings:
 Document any research papers, tools, tutorials, or other resources you shared
 with the research group that helped advance collective knowledge:
 
-- **Resource**: [Paper title, tool name, tutorial link, etc.]
-- **Shared With**: [Individual researcher or entire group]
-- **Purpose**: [Why you shared it and how it was relevant]
-
-Example entries:
-
 - **Resource:** Winter, F. and Musliu, N. (2021). "Constraint-based Scheduling for Paint Shops in the Automotive Supply Industry." *ACM Transactions on Intelligent Systems and Technology* 12(2), Article 17. https://doi.org/10.1145/3430710
 - **Shared With:** Gabriel Salvatore
 - **Purpose:** Gabriel was curious about how constraint programming applies to industrial scheduling problems outside the domain of his own project. The Winter and Musliu paper is a clean published example of CP applied to a real industrial scheduling problem (paint shop sequencing) and uses some of the same modeling primitives — interval variables, no-overlap constraints, cumulative resources — that appear in MaintAlign. Shared it as a reference for connecting the constraint-programming approach to a peer-reviewed industrial case study.
